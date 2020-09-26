@@ -45,7 +45,7 @@ function draw(){
         clear();
         game.end();
     }
-    if(playerCount == 0){
+    if(playerCount < 4){
         game.update(0);
     }
     // background("red");
