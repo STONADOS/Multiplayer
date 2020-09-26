@@ -45,6 +45,9 @@ function draw(){
         clear();
         game.end();
     }
+    if(playerCount == 0){
+        game.update(0);
+    }
     // background("red");
     // if(position != undefined){
     // if(keyDown("a")){
