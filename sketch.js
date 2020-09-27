@@ -9,6 +9,7 @@ var all_players;
 var cars, car1, car2, car3, car4;
 var car1image, car2image, trackimage, gameoverScreen;
 var gameover;
+var carsatend = 0;
 
 function preload(){
     car1image = loadImage("sprites/us.png");
@@ -44,9 +45,6 @@ function draw(){
     else if(gamestate == 2){
         clear();
         game.end();
-    }
-    if(playerCount == 0){
-        game.update(0);
     }
     // background("red");
     // if(position != undefined){

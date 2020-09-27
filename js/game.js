@@ -44,6 +44,7 @@ play(){
     form.hide();
     text("Game is Starting", windowWidth/2 - 300, windowHeight/2);
     Player.playerInfo();
+    player.getCarsAtEnd();
     if(all_players != undefined){
         background("black");
         image(trackimage, 0, -windowHeight * 25, windowWidth, windowHeight * 50);
@@ -71,13 +72,17 @@ play(){
     } 
     if(player.distance == 3500){
         gamestate = 2;
+        player.rank += 1;
+        Player.updateCarsAtEnd(player.rank); 
     }
     drawSprites();
 }
 end(){
-    gameover = createSprite(windowWidth/2, windowHeight/2);
-    gameover.addImage("gameended", gameoverScreen);
-    gameover.scale = 2;
-    drawSprites();
+    console.log("gameEnded");
+    text(player.rank, 200, 100);
+    // gameover = createSprite(windowWidth/2, windowHeight/2);
+    // // gameover.addImage("gameended", gameoverScreen);
+    // // gameover.scale = 2;
+    // drawSprites();
 }
 }
