@@ -46,6 +46,12 @@ function draw(){
         clear();
         game.end();
     }
+<<<<<<< HEAD
+=======
+    if(playerCount < 4){
+        game.update(0);
+    }
+>>>>>>> 576679edc039869de5fbf5d0ac73c28b484178ac
     // background("red");
     // if(position != undefined){
     // if(keyDown("a")){
